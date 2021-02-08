@@ -29,5 +29,6 @@ route::get('/admin/user/roles',['middleware'=>['role','auth','web'],function(){
     return "Middleware role";
 }]);
 
-
 route::get('/home','AdminController@index');
+//route::post('/home/{name}/email/password/confirmpassword','HomeController@create');
+Route::post('home', 'HomeController@create')->name('home.create');
